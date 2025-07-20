@@ -32,12 +32,15 @@ function startStory() {
     }
     const minute = parseInt(day) + parseInt(hour);
 
-
+    console.log(`Once upon a time, there was a ${animal} who could talk. 
+    However he never revealed this power to anyone. He'd say “${animalSound}” anytime someone asked him a question. 
+    “Who’s a good boy!” “${animalSound}” he replied. “${question}” “${animalSound}” was his refutation. 
+    He’d never utter a word about a tree or a ${rodent}. Then one day on the ${day}th day of July at ${hour}:${minute} he went up to his owner. 
+    “Aw doggy want a treat?” “No one will believe you.” said the dog as he walked away.`)
 
     storyText.textContent = `Once upon a time, there was a ${animal} who could talk. 
     However he never revealed this power to anyone. He'd say “${animalSound}” anytime someone asked him a question. 
     “Who’s a good boy!” “${animalSound}” he replied. “${question}” “${animalSound}” was his refutation. 
     He’d never utter a word about a tree or a ${rodent}. Then one day on the ${day}th day of July at ${hour}:${minute} he went up to his owner. 
-    “Aw doggy want a treat?” “No one will believe you.” said the dog as he walked away. 
-    `;
+    “Aw doggy want a treat?” “No one will believe you.” said the dog as he walked away.`;
 }
