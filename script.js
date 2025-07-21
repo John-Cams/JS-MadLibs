@@ -30,7 +30,25 @@ function startStory() {
         alert("Not a valid answer");
         hour = prompt("Enter a number between 1-12");
     }
-    const minute = parseInt(day) + parseInt(hour);
+    let minute = parseInt(day) + parseInt(hour);
+    if (minute < 10) {
+        minute = `0${minute}`
+    }
+
+    switch (parseInt(day)) {
+        case 1:
+            day = "1st"
+            break;
+        case 2:
+            day = "2nd"
+            break;
+        case 3:
+            day = "3rd"
+            break;
+        default:
+            day = `${day}th`
+    }
+
 
     console.log(`Once upon a time, there was a ${animal} who could talk. 
     However he never revealed this power to anyone. He'd say “${animalSound}” anytime someone asked him a question. 
@@ -41,6 +59,6 @@ function startStory() {
     storyText.textContent = `Once upon a time, there was a ${animal} who could talk. 
     However he never revealed this power to anyone. He'd say “${animalSound}” anytime someone asked him a question. 
     “Who’s a good boy!” “${animalSound}” he replied. “${question}” “${animalSound}” was his refutation. 
-    He’d never utter a word about a tree or a ${rodent}. Then one day on the ${day}th day of July at ${hour}:${minute} he went up to his owner. 
+    He’d never utter a word about a tree or a ${rodent}. Then one day on the ${day} day of July at ${hour}:${minute} he went up to his owner. 
     “Aw doggy want a treat?” “No one will believe you.” said the dog as he walked away.`;
 }
